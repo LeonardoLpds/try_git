@@ -1,0 +1,70 @@
+##################################################
+#Repositório criado para armazenamento de códigos#
+##################################################
+
+---------Observações Iniciais----------------------------------------------------------------------
+Instalar o git:
+ *Ubuntu:	sudo apt-get install git
+ *Fedora:	sudo yum install git
+ *OpenSuse:	sudo zypper install git
+
+Depois de instalar o git deve-se adicionar seu nome e seu e-mail, para que os mesmo aparecam em
+seus commits!
+Segue abaixo como fazer tais funções, também como clonar ou iniciar um novo diretório no git!
+
+Caso seja um iniciante no git, aconselho fazer um pequeno tutorial pratico do git no endereço
+try.github.com/levels/1/challenges/1
+
+---------Clonando e Usando um git já existente-----------------------------------------------------
+
+Endereço da origem: git@github.com:LeonardoLpds/try_git.git
+Para verificar esse endereço pelo terminal, digite: git remote -v
+Para adicionar o repositório caso não tenha um: git remote add origin <Endereço>
+
+para criar um branch (braço) usa-se o comando: git branch <nome do branch>
+para deletar um branch: git branch -D <nome do branch>
+para alterar entre branchs: git checkout <nome do branch>
+para verificar os branchs existentes: git branch -v
+para fazer um update de um branch (o que você não esta) para o seu branch atual, use o comando:
+git merge <nome do branch>
+
+para verificar o que foi alterado/feito nos docs e para verificar os commits faltantes
+use o comando: git status
+
+caso ao usar o git status esteja apresentando algum arquivo como Untracked file, você precisa
+adicionar esse arquivo na area de staging do git. Use o comando: git add <arquivo>
+
+caso varios arquivos estejam como Untracked files, e estes mesmos arquivos estejam em diversas
+pastas diferentes, use simplesmente o corring '*' para adicionar todos os arquivos na area de
+staging. Por exemplo, se forem arquivos .txt use o comando: git add '*.txt'
+
+para comitar: git commit -m "Definição do commit"
+
+para ver um histórico do que foi commitado, quando foi commitado e quem commitou,
+use o comando: git log
+
+para enviar seus docs para o server: git push
+para atualizar seus docs com os docs do server: git pull
+para criar um clone dos docs do server na sua maquina: git clone <origem>
+
+para adicionar seu email no git: git config --global user.email <email>
+para adicionar seu nome no git: git config --globla user.name <nome>
+
+para verificar tudo que foi alterado, entre branchs, commits e arquivos até, use o comando:
+git diff HEAD
+git diff --staged
+
+para tornar um arquivo como padrão de reste use o comando: git reset <arquivo>
+para resetar esse arquivo, use o comando: git checkout -- <arquivo>
+
+
+--------Iniciando um novo git-----------------------------------------------------------------------
+(Os comandos sitados a cima não se repetem nessa sessão)
+
+Para iniciar o git em uma determinada pasta, ou seja, criar a pasta .git usa-se o comando: git init
+
+para adicionar a origem do push, use o comando: git push -u origin master (padrão)
+
+e para adicionar a origem do pull, use o comando: git pull origin master
+
+-----------------------------------------------------------------------------------------------------
