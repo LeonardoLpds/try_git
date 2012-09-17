@@ -21,11 +21,11 @@ Endereço da origem: git@github.com:LeonardoLpds/try_git.git
 Para verificar esse endereço pelo terminal, digite: git remote -v
 Para adicionar o repositório caso não tenha um: git remote add origin <Endereço>
 
-para criar um branch (braço) usa-se o comando: git branch <nome do branch>
+para criar um branch (ramo/braço) usa-se o comando: git branch <nome do branch>
 para deletar um branch: git branch -D <nome do branch>
 para alterar entre branchs: git checkout <nome do branch>
 para verificar os branchs existentes: git branch -v
-para fazer um update de um branch (o que você não esta) para o seu branch atual, use o comando:
+para mesclar um branch (o que você não esta) com o seu branch atual, use o comando:
 git merge <nome do branch>
 
 para verificar o que foi alterado/feito nos docs e para verificar os commits faltantes
@@ -35,10 +35,13 @@ caso ao usar o git status esteja apresentando algum arquivo como Untracked file,
 adicionar esse arquivo na area de staging do git. Use o comando: git add <arquivo>
 
 caso varios arquivos estejam como Untracked files, e estes mesmos arquivos estejam em diversas
-pastas diferentes, use simplesmente o corring '*' para adicionar todos os arquivos na area de
+pastas diferentes, use simplesmente o corringa '*' para adicionar todos os arquivos na area de
 staging. Por exemplo, se forem arquivos .txt use o comando: git add '*.txt'
 
-para comitar: git commit -m "Definição do commit"
+Caso os arquivos sejam de extenções diferentes, use o seguinte comando para adicionar tudo: git add -A
+
+para commitar: git commit -m "Definição do commit"
+também use o comando: git commit -am "Definição do commit" para já adicionar arquivos
 
 para ver um histórico do que foi commitado, quando foi commitado e quem commitou,
 use o comando: git log
@@ -46,6 +49,8 @@ use o comando: git log
 para enviar seus docs para o server: git push
 para atualizar seus docs com os docs do server: git pull
 para criar um clone dos docs do server na sua maquina: git clone <origem>
+para baixar as atualizações do server: git fetch
+para mesclar os docs: git rebase
 
 para adicionar seu email no git: git config --global user.email <email>
 para adicionar seu nome no git: git config --globla user.name <nome>
@@ -54,8 +59,11 @@ para verificar tudo que foi alterado, entre branchs, commits e arquivos até, us
 git diff HEAD
 git diff --staged
 
-para tornar um arquivo como padrão de reste use o comando: git reset <arquivo>
+para tornar um arquivo como padrão de reset use o comando: git reset <arquivo>
 para resetar esse arquivo, use o comando: git checkout -- <arquivo>
+para sesetar para um determinado commit, veja o id do commit com o comando git log, e depois use o comando:
+git checkou <id do commit>
+para resetar para o ultimo commit: git checkou HEAD
 
 
 --------Iniciando um novo git-----------------------------------------------------------------------
